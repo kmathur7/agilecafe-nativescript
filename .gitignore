@@ -1,6 +1,6 @@
 .vscode/
 app/**/*.js
-app/**/*.js.map
+app/**/*.map
 hooks/
 lib/
 node_modules/
