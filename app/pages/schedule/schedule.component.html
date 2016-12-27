@@ -1,1 +1,14 @@
-<Label text="Schedule"></Label>
+<ActionBar class="action-bar">
+  <StackLayout class="action-bar-title">
+    <Label text="Schedule"></Label>
+  </StackLayout>
+</ActionBar>
+
+<ListView [items]="events" class="list-group" (itemTap)="onItemTap($event)">
+    <template let-item="item" let-i="index" >
+        <StackLayout class="list-group-item">
+            <Label [text]='item.city_name'></Label>
+            <Label [text]='item.event_date'></Label>
+        </StackLayout>
+    </template>
+</ListView>

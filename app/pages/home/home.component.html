@@ -1,7 +1,17 @@
-<GridLayout columns='*,*,*,*' rows='auto'>
-    <GridLayout colSpan="5" columns="*,*,*,*,*" >
-        <Label class="material-icons" text="menu" horizontalAlignment="left" verticalAlignment="center"></Label>
-        <Label text="Agile Cafe" colSpan="5" horizontalAlignment="center" verticalAlignment="center"></Label>
+<GridLayout columns='*,*,*,*' rows='auto,*,*'>
+    <GridLayout colSpan="5" columns="*,*,*,*,*" class="action-bar header-text">
+        <Label text="Agile Cafe" colSpan="5" horizontalAlignment="center" verticalAlignment="center" class="action-bar-title"></Label>
         <Label class="material-icons" text="person" col="4" horizontalAlignment="right" verticalAlignment="center"></Label>
     </GridLayout>
+
+    <StackLayout row="1" col="1" colSpan="2">
+        <Image src="~/images/logo.jpg"></Image>
+    </StackLayout>
+
+    <StackLayout row="2" colSpan="5">
+        <Button text="Schedule" class="btn btn-outline btn-active btn-rounded-lg" (tap)="navigate()"></Button>
+        <Button text="Register as Speaker" class="btn btn-outline btn-active btn-rounded-lg"></Button>
+    </StackLayout>
+
+
 </GridLayout>

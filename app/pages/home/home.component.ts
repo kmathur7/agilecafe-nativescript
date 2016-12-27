@@ -8,7 +8,12 @@ import { Router } from "@angular/router";
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  items: Array<Object>;
+  selectedIndex: number;
+  constructor(private router: Router) {
+    this.selectedIndex = 0;
+    this.items=[{title: 'First'}, {title: 'Second'}];
+   }
   navigate() {
     this.router.navigate(['/schedule'])
   }

@@ -1,0 +1,36 @@
+<ActionBar class="action-bar">
+    <StackLayout class="action-bar-title">
+        <Label [text]="details.city_name"></Label>
+    </StackLayout>
+</ActionBar>
+<GridLayout rows="auto,auto,auto" columns="*,*,*,*">
+    <GridLayout colSpan="4" rows="*,*" columns="*,*,*,*" class="card-border">
+        <StackLayout colSpan="4">
+            <Label text="Location" horizontalAlignment="center"></Label>
+            <Label [text]="details.event_location" horizontalAlignment="center"></Label>
+        </StackLayout>
+        <StackLayout colSpan="2" col="0" row="1">
+            <Label text="Date"></Label>
+            <Label [text]="details.event_date"></Label>
+        </StackLayout>
+        <StackLayout colSpan="2" col="2" row="1">
+            <Label text="Time"></Label>
+            <Label [text]="details.event_time"></Label>
+        </StackLayout>
+    </GridLayout>
+    <StackLayout row="1" colSpan="4">
+        <Button text="Register as Speaker" class="btn btn-outline btn-active btn-rounded-lg"></Button>
+        <Button text="Register as Participants" class="btn btn-outline btn-active btn-rounded-lg"></Button>
+    </StackLayout>
+    <GridLayout row="2" colSpan="4" rows="*,*">
+        <SegmentedBar #sb [items]="event_type" selectedIndex="0" (selectedIndexChange)="changeData(sb.selectedIndex)"></SegmentedBar>
+        <ListView [items]="listsItems" class="list-group" row="1">
+            <template let-item="item" let-i="index">
+                <StackLayout class="list-group-item">
+                    <Label [text]='item.event_title'></Label>
+                    <Label [text]='item.event_speaker'></Label>
+                </StackLayout>
+            </template>
+        </ListView>
+    </GridLayout>
+</GridLayout>

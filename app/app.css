@@ -43,3 +43,9 @@ refer to http://docs.nativescript.org/ui/theme.
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+
+.header-text {
+  font-size: 20;
+  height: 55;
+}
+
